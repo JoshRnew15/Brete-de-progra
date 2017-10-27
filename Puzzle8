@@ -1,8 +1,82 @@
-public class Puzzle 8{
- private
+import java.util.ArrayList;
+import java.util.Arrays;
+public class Puzzle8{
+private [][] int tablaDeJuego = new [3][3] int;
+private [][] int solucionFinal = new [3][3] int;
+	public Puzzle8([][]int imagen){
+		private int rellenoDeEspacio = 1;
+  	for(int i = 0; i<solucionFinal.lenght;++i){
+  		for(int h = 0;h<solucionFinal.lenght;++i){
+    		if(rellenoDeEspacio = 9){
+        	rellenoDeEspacio = 0
+        }
+        solucionFinal[i][h] = rellenoDeEspacio;
+      	++rellenoDeEspacio;
+        }
+   	  }
+  	}
+    for(int i = 0; i<tablaDeJuego.lenght;++i){
+  		for(int h = 0;h<tablaDeJuego.lenght;++i){
+    		tablaDeJuego[i][h] = imagen[i][h];
+      	++rellenoDeEspacio;
+   	  }
+  	}
+	}
 
-
-
-
-
+ public [][]int nodo{
+ 
+ 
+ }
+	public void solucion(){
+ 	    int i = 0;
+      int h = 0;
+ 	    While(solucionFinal[i][h] != tablaDeJuego[i][h]){
+      
+ 	    }
+   
+   
+   }
+   public boolean haySolucion(){
+   	 int inversiones = 0;
+     private int x = 0;
+     boolean haySolucion;
+     boolean hayInversionPar;
+     boolean hayNumeroMayor;
+     []int lista = new [8] int;
+     for(int i = 0; i<tablaDeJuego.lenght;++i){
+     	 for(int h = 0; h<tablaDeJuego.lenght;++h){
+        	lista[x] = tablaDeJuego[i][h];
+          ++x;
+       }
+     }
+   	 for(int i = 0; i<lista.lenght; ++i){
+     	 for(int h = i+1; h<=lista.lenght; ++h){
+       	 if(lista[i]>lista[h]){
+         	 ++inversiones;
+         }
+       }
+      }
+      if(inversiones%2 == 0){
+      hayInversionPar =true;
+      }
+      else{
+      hayInversionPar = false;
+      }
+      for(int i = 0; i<lista.lenght; ++i){
+      	 if(lista[i]>8){
+         	 hayNumeroMayor = true;
+         }
+         else{
+         	 hayNumeroMayor = false;
+         }
+      }
+      
+      if(hayNumeroMayor && hayInversionPar){
+      	haySolucion = true;
+      }
+      else{
+      	haySolucion = false;
+      }
+      return haySolucion;
+    }
 }
